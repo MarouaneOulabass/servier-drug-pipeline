@@ -1,0 +1,6 @@
+datatest
+numpy
+packaging
+pandas
+pytest
+setuptools

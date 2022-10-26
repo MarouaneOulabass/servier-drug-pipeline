@@ -1,0 +1,7 @@
+my_venv/
+__pycache__/
+dist
+drug_pipeline.egg-info
+report.json
+build
+.eggs
