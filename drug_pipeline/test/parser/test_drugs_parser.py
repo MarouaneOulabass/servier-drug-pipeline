@@ -1,16 +1,16 @@
 import drug_pipeline.src.parser.drugs_parser as parser
 import pytest
 import pandas as pd
-
+import pathlib
 
 DRUGS_TYPE={'atccode': str, 'drug': str}
 DRUGS_HEADER = ['atccode','drug']
 PUBMED_TYPE={'id': str, 'title': str, 'date': str, 'journal': str}
 PUBMED_HEADER = ['id','title','date','journal']
-DRUGS_FILE_PATH = r'C:\Users\oulabass.m\Downloads\Tests\SER\servier-drug-pipeline\drug_pipeline\test\resources\drugs.csv'
-PUBMED_CSV_FILE_PATH = r'C:\Users\oulabass.m\Downloads\Tests\SER\servier-drug-pipeline\drug_pipeline\test\resources\pubmed.csv'
-PUBMED_JSON_FILE_PATH = r'C:\Users\oulabass.m\Downloads\Tests\SER\servier-drug-pipeline\drug_pipeline\test\resources\pubmed.json'
-CLINICAL_TRIALS_FILE_PATH = r'C:\Users\oulabass.m\Downloads\Tests\SER\servier-drug-pipeline\drug_pipeline\test\resources\clinical_trials.csv'
+DRUGS_FILE_PATH = str(pathlib.Path().resolve().parent.parent) + r'\servier-drug-pipeline\drug_pipeline\test\resources\drugs.csv'
+PUBMED_CSV_FILE_PATH = str(pathlib.Path().resolve().parent.parent) + r'\servier-drug-pipeline\drug_pipeline\test\resources\pubmed.csv'
+PUBMED_JSON_FILE_PATH = str(pathlib.Path().resolve().parent.parent) + r'\servier-drug-pipeline\drug_pipeline\test\resources\pubmed.json'
+CLINICAL_TRIALS_FILE_PATH = str(pathlib.Path().resolve().parent.parent) + r'\servier-drug-pipeline\drug_pipeline\test\resources\clinical_trials.csv'
 
 
 def test_parse_drugs():

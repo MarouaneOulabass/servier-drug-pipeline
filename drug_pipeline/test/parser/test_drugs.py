@@ -3,13 +3,13 @@
 import pytest
 import pandas as pd
 import datatest as dt
+import pathlib
 
 
 @pytest.fixture(scope='module')
 @dt.working_directory(__file__)
 def df():
-    return pd.read_csv(r'C:\Users\oulabass.m\Downloads\Tests\SER\servier-drug-pipeline\drug_pipeline\test\resources\drugs.csv')
-
+    return pd.read_csv(str(pathlib.Path().resolve().parent.parent) + r'\test\resources\drugs.csv')
     
 @pytest.mark.mandatory
 def test_columns(df):
