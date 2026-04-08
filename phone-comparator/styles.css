@@ -292,6 +292,28 @@ body {
     margin-top: 16px !important;
 }
 
+.download-sample-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 22px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.download-sample-btn:hover {
+    border-color: var(--accent-1);
+    color: var(--accent-1);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+}
+
 /* --- Section Headers --- */
 .section-header {
     display: flex;
